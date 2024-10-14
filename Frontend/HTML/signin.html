@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Study Companion login and signup page">
+    <title>Study Companion - Authentication</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="file:///C:/Users/rahil/OneDrive/AI%20Tutor%20Website/AI-Tutor/Frontend/CSS/signin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to AI Tutor! Let's start your learning journey</h1>
+        <div class="card">
+            <div class="tabs" role="tablist">
+                <div class="tab active" role="tab" aria-selected="true" aria-controls="loginForm" id="loginTab" tabindex="0">Login</div>
+                <div class="tab" role="tab" aria-selected="false" aria-controls="signupForm" id="signupTab" tabindex="0">Signup</div>
+            </div>
+
+            <form id="loginForm" role="tabpanel" aria-labelledby="loginTab">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" class="form-control" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" class="form-control" required aria-required="true">
+                </div>
+                <div class="form-footer">
+                    <label>
+                        <input type="checkbox" id="rememberMe"> Remember me
+                    </label>
+                    <button type="button" class="btn-link" id="forgotPasswordBtn">Forgot Password?</button>
+                </div>
+                <button type="submit" class="btn" id="loginButton" data-original-text="Login">Login</button>
+            </form>
+
+            <form id="signupForm" role="tabpanel" aria-labelledby="signupTab" style="display: none;">
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" class="form-control" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" class="form-control" required aria-required="true">
+                    <div class="password-strength"></div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" class="form-control" required aria-required="true">
+                </div>
+                <button type="submit" class="btn" id="signupButton" data-original-text="Sign Up">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="resetModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Reset Password</h2>
+            <div id="resetAlert" class="alert"></div>
+            <div id="resetSteps">
+                <div id="stepEmail" class="active">
+                    <p>Enter your email address to receive a reset code.</p>
+                    <div class="form-group">
+                        <label for="resetEmail">Email</label>
+                        <input type="email" id="resetEmail" class="form-control" required>
+                    </div>
+                    <button class="btn" id="sendCodeBtn" data-original-text="Send Reset Code">Send Reset Code</button>
+                </div>
+                <div id="stepCode">
+                    <p>Enter the reset code sent to your email.</p>
+                    <div class="form-group">
+                        <label for="resetCode">Reset Code</label>
+                        <input type="text" id="resetCode" class="form-control" required>
+                    </div>
+                    <button class="btn" id="verifyCodeBtn" data-original-text="Verify Code">Verify Code</button>
+                </div>
+                <div id="stepNewPassword">
+                    <p>Enter your new password.</p>
+                    <div class="form-group">
+                        <label for="newPassword">New Password</label>
+                        <input type="password" id="newPassword" class="form-control" required>
+                        <div class="password-strength"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmNewPassword">Confirm New Password</label>
+                        <input type="password" id="confirmNewPassword" class="form-control" required>
+                    </div>
+                    <button class="btn" id="resetPasswordBtn" data-original-text="Reset Password">Reset Password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="file:///C:/Users/rahil/OneDrive/AI%20Tutor%20Website/AI-Tutor/Frontend/JS/script.js"></script>
+</body>
+</html>
