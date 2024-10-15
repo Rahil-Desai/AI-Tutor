@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tutor - Student Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="file:///C:/Users/rahil/OneDrive/AI%20Tutor%20Website/AI-Tutor/Frontend/CSS/styles.css">
+    <link rel="stylesheet" href="file:///C:/Users/rahil/OneDrive/AI%20Tutor%20Website/AI-Tutor/Frontend/CSS/dashboard.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">AI Tutor</a>
+            <div class="nav-links">
+                <a href="#progress">Progress</a>
+                <a href="#recommendations">Recommendations</a>
+                <a href="#quizzes">Quizzes</a>
+                <a href="#lessons">Lessons</a>
+            </div>
+            <a href="#" class="btn btn-primary" id="logout-btn">Logout</a>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <div class="container">
+            <h1>Welcome back, Student!</h1>
+            
+            <section id="progress" class="dashboard-section">
+                <h2>Your Progress</h2>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h3>Overall Progress</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;">75%</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h3>Recent Activity</h3>
+                        <ul class="activity-list">
+                            <li>Completed Lesson: Introduction to Algebra</li>
+                            <li>Quiz Score: 90% in Geometry</li>
+                            <li>Started New Course: Advanced Chemistry</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Study Time</h3>
+                        <p>This week: 12 hours</p>
+                        <p>Last week: 10 hours</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="recommendations" class="dashboard-section">
+                <h2>AI Recommendations</h2>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h3>Suggested Topics</h3>
+                        <ul>
+                            <li>Quadratic Equations</li>
+                            <li>Cell Biology</li>
+                            <li>World War II</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Study Tips</h3>
+                        <p>Based on your learning style, try using more visual aids in your study sessions.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Performance Insight</h3>
+                        <p>Your problem-solving skills have improved by 15% this month. Keep up the good work!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="quizzes" class="dashboard-section">
+                <h2>Available Quizzes</h2>
+                <div class="dashboard-grid">
+                    <div class="card quiz-card">
+                        <h3>Algebra Basics</h3>
+                        <p>10 questions - 15 minutes</p>
+                        <a href="#" class="btn btn-secondary">Start Quiz</a>
+                    </div>
+                    <div class="card quiz-card">
+                        <h3>Chemistry Fundamentals</h3>
+                        <p>15 questions - 20 minutes</p>
+                        <a href="#" class="btn btn-secondary">Start Quiz</a>
+                    </div>
+                    <div class="card quiz-card">
+                        <h3>World History Overview</h3>
+                        <p>20 questions - 25 minutes</p>
+                        <a href="#" class="btn btn-secondary">Start Quiz</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="lessons" class="dashboard-section">
+                <h2>Your Lessons</h2>
+                <div class="dashboard-grid">
+                    <div class="card lesson-card">
+                        <h3>Advanced Algebra</h3>
+                        <p>Progress: 60%</p>
+                        <a href="#" class="btn btn-primary">Continue</a>
+                    </div>
+                    <div class="card lesson-card">
+                        <h3>Organic Chemistry</h3>
+                        <p>Progress: 30%</p>
+                        <a href="#" class="btn btn-primary">Continue</a>
+                    </div>
+                    <div class="card lesson-card">
+                        <h3>European History</h3>
+                        <p>Progress: 80%</p>
+                        <a href="#" class="btn btn-primary">Continue</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AI Tutor. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="file:///C:/Users/rahil/OneDrive/AI%20Tutor%20Website/AI-Tutor/Frontend/JS/script.js"></script>
+</body>
+</html>

@@ -296,3 +296,50 @@ document.getElementById('sendCodeBtn').addEventListener('click', async function(
         setLoading(sendCodeBtn, false);
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    // Dashboard specific functionality
+    if (document.querySelector('.dashboard')) {
+        // Logout button functionality
+        const logoutBtn = document.getElementById('logout-btn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('You have been logged out.');
+                // In a real application, you would handle the logout process here
+                window.location.href = 'index.html';
+            });
+        }
+
+        // Quiz start buttons
+        const quizButtons = document.querySelectorAll('.quiz-card .btn');
+        quizButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const quizTitle = e.target.closest('.quiz-card').querySelector('h3').textContent;
+                alert(`Starting quiz: ${quizTitle}`);
+                // In a real application, you would start the quiz here
+            });
+        });
+
+        // Lesson continue buttons
+        const lessonButtons = document.querySelectorAll('.lesson-card .btn');
+        lessonButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lessonTitle = e.target.closest('.lesson-card').querySelector('h3').textContent;
+                alert(`Continuing lesson: ${lessonTitle}`);
+                // In a real application, you would continue the lesson here
+            });
+        });
+
+        // Simulate loading of dynamic content
+        setTimeout(() => {
+            document.querySelectorAll('.dashboard-section').forEach(section => {
+                section.style.opacity = '1';
+                section.style.transform = 'translateY(0)';
+            });
+        }, 300);
+    }
+});
